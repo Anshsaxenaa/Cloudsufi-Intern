@@ -1,34 +1,15 @@
-import java.sql.*;
+import java.util.LinkedList;
 
-class Geeks {
-    public static void main(String[] args) throws Exception {
-        String url = "jdbc:mysql://localhost:3306/database_name"; // Database details
-        String username = "rootgfg"; // MySQL credentials
-        String password = "gfg123";
-        String query = "select * from students"; // Query to be run
+public class Geeks{
+            public static void main(String[] args){
+                LinkedList<String> al = new LinkedList<>();
+                al.add("I");
 
-        // Load and register the driver
-        Class.forName("com.mysql.cj.jdbc.Driver");
+                al.add("Ansh");
+                al.add(1,"am");
+                System.out.println(" string is :" +al);
+                al.remove(1);
+                System.out.println("New String is:" +al);
+            }
 
-        // Establish connection
-        Connection con = DriverManager.getConnection(url, username, password);
-        System.out.println("Connection Established successfully");
-
-        // Create a statement
-        Statement st = con.createStatement();
-
-        // Execute the query
-        ResultSet rs = st.executeQuery(query);
-
-        // Process the results
-        while (rs.next()) {
-            String name = rs.getString("name"); // Retrieve name from db
-            System.out.println(name); // Print result on console
         }
-
-        // Close the statement and connection
-        st.close();
-        con.close();
-        System.out.println("Connection Closed....");
-    }
-}
