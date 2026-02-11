@@ -1,5 +1,4 @@
 import java.util.*;
-import java.util.Collections;
 
 public class Jukebox1 {
     public static void main(String[] args) {
@@ -8,10 +7,9 @@ public class Jukebox1 {
     }
 
     public void go() {
-        List<String> songs = MockSons.getSongsStrings();
-        System.out.println(songs);
-        Collections.sort(songs);
-        System.out.println(songs);
+        List<SongV2> songV2 = SongV2.getSongs();
+        System.out.println(songV2);
+        Collections.sort(songV2);
+        System.out.println(songV2);
     }
-
 }
