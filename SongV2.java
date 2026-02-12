@@ -6,6 +6,15 @@ public class SongV2 implements Comparable<SongV2> {
     public String artist;
     public int bpm;
 
+    public boolean equals(Object aSong) {
+        SongV2 song = (SongV2) aSong;
+        return this.title.equals(song.title);
+    }
+
+    public int hashCode() {
+        return this.title.hashCode();
+    }
+
     public int compareTo(SongV2 s) {
         return this.title.compareTo(s.title);
     }
@@ -38,7 +47,7 @@ public class SongV2 implements Comparable<SongV2> {
         songs.add(new SongV2("Cold", "katy perry", 43));
         songs.add(new SongV2("$10", "katy perry", 96));
         songs.add(new SongV2("Animals", "katy perry", 105));
-        songs.add(new SongV2("Cassidy", "katy perry", 12));
+        songs.add(new SongV2("cassidy", "katy perry", 12));
         songs.add(new SongV2("50 Ways", "katy perry", 154));
         return songs;
 
