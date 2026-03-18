@@ -10,7 +10,10 @@ public class Main {
 
             api.getObjects();
             api.createObject();
-            api.updateObject("7");
+            api.updateObject("ff8081819cd4022c019d004533664515");
+            api.patchObject("ff8081819cd4022c019d004533664515");
+            api.deleteObject("ff8081819cd4022c019d004533664515");
+
         } catch (Exception e) {
             e.printStackTrace();
         }
