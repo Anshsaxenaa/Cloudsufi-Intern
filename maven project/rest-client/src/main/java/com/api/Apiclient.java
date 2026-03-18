@@ -58,4 +58,30 @@ public class Apiclient {
 
         System.out.println(response.body());
     }
+     public void patchObject(String id) throws Exception {
+
+        String json = "{\"name\": \"MacBook Pro (Patched Name)\"}";
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(URL + "/" + id))
+                .header("Content-Type", "application/json")
+                .method("PATCH", HttpRequest.BodyPublishers.ofString(json))
+                .build();
+
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        System.out.println(response.body());
+    }
+
+    public void deleteObject(String id) throws Exception {
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(URL + "/" + id))
+                .DELETE()
+                .build();
+
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        System.out.println(response.body());
+    }
 }
