@@ -10,7 +10,7 @@ public class Main {
 
             api.getObjects();
             api.createObject();
-
+            api.updateObject("7");
         } catch (Exception e) {
             e.printStackTrace();
         }
