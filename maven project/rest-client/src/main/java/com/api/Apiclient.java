@@ -13,6 +13,18 @@ public class Apiclient {
 
     HttpClient client = HttpClient.newHttpClient();
     ObjectMapper mapper = new ObjectMapper();
+    
+    public void headRequest() throws Exception {
+
+        HttpRequest request = HttpRequest.newBuilder()
+                .uri(URI.create(URL))
+                .method("HEAD", HttpRequest.BodyPublishers.noBody())
+                .build();
+
+        HttpResponse<String> response = client.send(request, HttpResponse.BodyHandlers.ofString());
+
+        System.out.println(response.headers().map());
+    }
 
     public void getObjects() throws Exception {
 
