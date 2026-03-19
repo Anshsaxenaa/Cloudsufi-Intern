@@ -7,7 +7,8 @@ public class Main {
         Apiclient api = new Apiclient();
 
         try {
-
+            
+            api.headRequest();
             api.getObjects();
             api.createObject();
             api.updateObject("ff8081819cd4022c019d004533664515");
