@@ -51,10 +51,11 @@ ETL-CRUD-Project/
 ├── model/          # Entity classes (Employee)
 ├── dao/            # Database interaction (CRUD)
 ├── service/        # Business logic & ETL processing
-├── util/           # Utility classes (DB connection, validation, logger)
+├── util/           # Utility classes (validation, logger)
+├── db/             # Database connections
 ├── main/           # Main class with console menu
 ├── test/           # JUnit test cases
-└── resources/      # CSV/JSON sample files
+└── data/      # CSV/JSON sample files
 
 
 ⸻
