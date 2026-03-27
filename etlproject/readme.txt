@@ -129,8 +129,7 @@ password = your_password
 
 📈 Future Enhancements
 	•	Add GUI (JavaFX / Web UI)
-	•	Integrate REST APIs
-	•	Use Hibernate instead of JDBC
+	•	Use springboot.
 	•	Add Docker support for deployment
 
 ⸻
