@@ -1,0 +1,20 @@
+[
+    {
+        "id": 9,
+        "name": "Abhay",
+        "email": "ansh@gmail.com",
+        "salary": 50000
+    },
+    {
+        "id": 8,
+        "name": "Rahul",
+        "email": "rahul@gmail.com",
+        "salary": 45000
+    },
+    {
+        "id": 3,
+        "name": "Invalid",
+        "email": "invalidemail",
+        "salary": 30000
+    }
+]
